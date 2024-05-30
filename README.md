@@ -77,14 +77,46 @@ Alternatively, you can run the command "pip install -r requirements.txt" to inst
 ## Train Pretraining model
 
 ```
-python train_mcstra.py --batch_size=8 --num_epochs=50 --tvsr=1. --vvsr=1. --num_hts=2 --embed_dims=48,96,48
+python pretrain_clmri.py --seq_types=AXFLAIR --dp=2 --bs=4 --ne=100 --tnv=0 --vnv=0 --viznv=5 --num_cascades=12 --pools=4 --chans=18 --sens_pools=4 --sens_chans=8
 ```
 
 ## Train downstream reconstruction Models
 
+D5C5
+```
+python train_d5c5_with_clmri.py --dp=0,1 --bs=2 --ne=100 --tnv=0 --vnv=0 --viznv=5 --lr=0.0001 --pret=<path to the trained contrastive featrure extractor>
+```
+U-Net
+```
+python train_unet_with_clmri.py --dp=0,1 --bs=2 --ne=100 --tnv=0 --vnv=0 --viznv=5 --lr=0.0001 --pret=<path to the trained contrastive featrure extractor>
+```
+MICCAN
+```
+python train_miccan_with_clmri.py --dp=0,1 --bs=2 --ne=100 --tnv=0 --vnv=0 --viznv=5 --lr=0.0001 --pret=<path to the trained contrastive featrure extractor>
+```
+ReconFormer
+```
+python train_reconformer_with_clmri.py --dp=0,1 --bs=2 --ne=100 --tnv=0 --vnv=0 --viznv=5 --lr=0.0001 --pret=<path to the trained contrastive featrure extractor>
+```
 
 ## Train baseline reconstruction Models
 
+D5C5
+```
+python train_d5c5.py --dp=0,1 --bs=2 --ne=100 --tnv=0 --vnv=0 --viznv=5 --lr=0.0001
+```
+U-Net
+```
+python train_unet.py --dp=0,1 --bs=2 --ne=100 --tnv=0 --vnv=0 --viznv=5 --lr=0.0001
+```
+MICCAN
+```
+python train_miccan.py --dp=0,1 --bs=2 --ne=100 --tnv=0 --vnv=0 --viznv=5 --lr=0.0001
+```
+ReconFormer
+```
+python train_reconformer.py --dp=0,1 --bs=2 --ne=100 --tnv=0 --vnv=0 --viznv=5 --lr=0.0001
+```
 
 ## Acknowledgements
 - This repository makes use of the fastMRI codebase for training, evaluation, and data preparation: https://github.com/facebookresearch/fastMRI
