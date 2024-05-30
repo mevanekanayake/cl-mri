@@ -1,0 +1,6 @@
+{
+	"<computer name>": {
+		"<dataset name>": "<dataset path>",
+		"experiments": "<experiments path>"
+	}
+}
