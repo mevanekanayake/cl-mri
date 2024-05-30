@@ -33,13 +33,22 @@ Alternatively, you can run the command "pip install -r requirements.txt" to inst
 ## File structure
 
 ```
- McSTRA
-  ├── train_clmri.py
+ cl-mri
+  ├── pretrain_clmri.py
+  ├── train_unet.py
+  ├── train_unet_with_clmri.py
+  ├── train_d5c5.py
+  ├── train_d5c5_with_clmri.py
+  ├── train_miccan.py
+  ├── train_miccan_with_clmri.py
+  ├── train_reconformer.py
+  ├── train_reconformer_with_clmri.py
   ├── models
-  │     └── clmri.py
-
-
-
+  │     ├── varnet.py
+  │     ├── unet.py
+  │     ├── d5c5.p
+  │     ├── miccan.py
+  │     └── reconformer.py
   ├── utils
   │     ├── data.py
   │     ├── evaluate.py
@@ -48,8 +57,10 @@ Alternatively, you can run the command "pip install -r requirements.txt" to inst
   │     ├── mask.py
   │     ├── math.py
   │     ├── mulitcoil.py
+  |     ├── paths.json
   │     └── transforms.py
-  ├── paths.json
+  ├── losses
+  │     └── supconloss.py
   ├── requirements.txt
   ├── data
   │     ├── knee
