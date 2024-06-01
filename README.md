@@ -123,4 +123,4 @@ python train_reconformer.py --dp=0,1 --bs=2 --ne=100 --tnv=0 --vnv=0 --viznv=5 -
 
 
 ## Citing Our Work
-Please cite: M. Ekanayake, Z. Chen, M. Harandi, G. Egan, and Z. Chen, CL-MRI: Self-Supervised Contrastive Learning to Improve the Accuracy of Undersampled MRI Reconstruction. 2024. https://arxiv.org/abs/2306.00530v2
+Please cite: M. Ekanayake, Z. Chen, M. Harandi, G. Egan, and Z. Chen, CL-MRI: Self-Supervised Contrastive Learning to Improve the Accuracy of Undersampled MRI Reconstruction. 2024. https://arxiv.org/abs/2306.00530v3
